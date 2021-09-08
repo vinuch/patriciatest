@@ -2,11 +2,11 @@ import { Header, MainArea, RecentActivity, Sidebar } from './components';
 
 function App() {
   return (
-    <div className="flex h-screen py-4">
+    <div className="flex h-screen overflow-y-hidden">
       <Sidebar />
-      <div>
+      <div className="w-10/12 h-full">
         <Header />
-        <div className="flex">
+        <div className="flex h-full">
           <MainArea />
           <RecentActivity />
         </div>

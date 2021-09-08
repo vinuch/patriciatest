@@ -10,7 +10,8 @@ module.exports = {
         error: '#CC4945',
         gray1: '#EFF2F7',
         gray2: '#979AA5',
-        gray3: '#C0CCDA'
+        gray3: '#C0CCDA',
+        gray4: '#F9FAFC'
       },
       animation: {
         'spin-slow': 'spin 20s linear infinite'
