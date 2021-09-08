@@ -2,7 +2,7 @@ import { Header, MainArea, RecentActivity, Sidebar } from './components';
 
 function App() {
   return (
-    <div className="flex">
+    <div className="flex h-screen py-4">
       <Sidebar />
       <div>
         <Header />

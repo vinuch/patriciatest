@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 
 // tailwindcss
 import './index.css';
+import './assets/style/index.css';
 
 ReactDOM.render(
   <React.StrictMode>
