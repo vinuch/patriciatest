@@ -13,7 +13,7 @@ export default function Header() {
         <button className="bg-white p-2 mx-2 rounded-md">
           <NotificationIcon showBadge/>
         </button>
-        <button className="bg-white p-2 mx-2 rounded-md">
+        <button className="bg-white p-1 mx-2 rounded-md">
           <img src={avatar} alt="avatar" className="w-10 rounded-md h-10" />
         </button>
         <button>
