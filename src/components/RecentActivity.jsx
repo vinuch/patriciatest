@@ -1,8 +1,7 @@
-import amazon from '../assets/img/amazon.png'
-import nike from '../assets/img/nike.png'
+
 export default function RecentActivity() {
   return (
-    <div className="w-4/12 bg-gray4 h-full p-6">
+    <div className="w-full md:w-28p bg-gray4 h-full p-4 md:fixed right-0 right-0 md:p-6">
       <div className="bg-white rounded-lg w-full h-full p-4">
         <div className="flex justify-between">
           <h4 className="text-gray5 font-medium text-lg">Recent Activity</h4>

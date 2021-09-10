@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing: {
+        '16p': '16.6%',
+        '28p': '28%'
+      },
       colors: {
         primary: '#006156',
         primaryLight: '#DEF5F2',

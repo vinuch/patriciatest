@@ -5,7 +5,7 @@ import NairaCard from './NairaCard';
 import DollarCard from './DollarCard';
 
 export default function CardSlider() {
-  const [cards, setcards] = useState([{type: 'dollar'},{type: 'naira'},{type: 'dollar'},{type: 'naira'}])
+  const [cards] = useState([{type: 'dollar'},{type: 'naira'},{type: 'dollar'},{type: 'naira'}])
   const update = function (newActive) {
   const carouselItems = document.querySelectorAll(".carousel__item");
   const elems = Array.from(carouselItems);

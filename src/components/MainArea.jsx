@@ -2,8 +2,8 @@ import CardSlider from "./CardSlider";
 
 export default function MainArea() {
   return (
-    <div className="border-t border-gray1 w-8/12 h-100 px-8 py-12">
-      <div className="flex items-center justify-between">
+    <div className="border-t border-gray1 w-full md:w-8/12 h-100 px-4 md:px-8 py-12">
+      <div className="flex flex-wrap items-center justify-between">
         <div className="flex items-center">
           <svg className="w-12 h-12" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="40" height="40" rx="8" fill="#DEF5F2"/>
@@ -17,13 +17,13 @@ export default function MainArea() {
           </div>
         </div>
       
-        <button className="bg-secondary text-lg rounded-md px-8 py-3">Create New Card</button>
+        <button className="bg-secondary text-lg rounded-md px-8 py-3 my-6 ml-auto">Create New Card</button>
       </div>
 
       <CardSlider />
 
-      <div className="bg-gray4 w-full p-8 rounded-3xl my-4 flex items-start">
-        <div className="w-9/12">
+      <div className="bg-gray4 w-full p-4 md:p-8 rounded-3xl my-4 flex flex-wrap items-start">
+        <div className="w-full md:w-9/12">
           <p className="flex w-full mb-6"><span className="w-6/12 text-gray5">Card Balance</span><span className="w-6/12 text-primary font-medium text-lg">$3000.73</span></p>
           <p className="flex w-full mb-6"><span className="w-6/12 text-gray5">Name</span><span className="w-6/12 text-grayDark font-medium text-lg">Netflix Card</span></p>
           <p className="flex w-full mb-6"><span className="w-6/12 text-gray5">Card Status</span><span className="w-6/12 text-grayDark font-medium text-lg">Active</span></p>
