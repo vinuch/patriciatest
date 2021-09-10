@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#006156',
+        primaryLight: '#DEF5F2',
         secondary: '#FFCE00',
         error: '#CC4945',
         gray1: '#EFF2F7',
@@ -13,7 +14,8 @@ module.exports = {
         gray3: '#C0CCDA',
         gray4: '#F9FAFC',
         gray5: '#9DA8B6',
-        grayDark: '#575A65'
+        grayDark: '#575A65',
+        light: '#FFEEA7'
       },
       animation: {
         'spin-slow': 'spin 20s linear infinite'

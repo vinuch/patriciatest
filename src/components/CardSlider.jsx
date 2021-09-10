@@ -1,9 +1,11 @@
 import { useState } from 'react';
 // import styles from '../assets/style/slider.module.css'
 import '../assets/style/slider.css';
+import NairaCard from './NairaCard';
+import DollarCard from './DollarCard';
 
 export default function CardSlider() {
-  const [cards, setcards] = useState([1,2,3,4])
+  const [cards, setcards] = useState([{type: 'dollar'},{type: 'naira'},{type: 'dollar'},{type: 'naira'}])
   const update = function (newActive) {
   const carouselItems = document.querySelectorAll(".carousel__item");
   const elems = Array.from(carouselItems);
@@ -30,14 +32,22 @@ export default function CardSlider() {
   };
 
   const handleClick = (e) => {
-    update(e.target);
+    update(e.target.closest('.carousel__item'));
   }
   return (
     <div className="carousel">
       <ul className="carousel__list">
         {
           cards.map((item, idx) => (
-            <li className={`carousel__item dollar_card`} data-pos={idx+1} onClick={handleClick}>{idx + 1}</li>
+            <li className={`carousel__item dollar_card overflow-hidden`} data-pos={idx+1} onClick={handleClick}>
+              {
+                item.type === 'dollar'? (
+                  <DollarCard />
+                ): (
+                  <NairaCard />
+                )
+              }
+            </li>
           ))
         }
       </ul>
