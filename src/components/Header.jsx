@@ -5,7 +5,7 @@ import logo from '../assets/img/Logo.svg';
 import avatar from '../assets/img/avatar.png'
 export default function Header() {
   return (
-    <div className=" flex justify-between items-start fixed w-full md:w-10/12 z-20 bg-white">
+    <div className=" flex justify-between items-start fixed w-full lg:w-10/12 z-20 bg-white">
             
       <div className="bg-white md:w-8/12 px-6 py-6 flex flex-wrap items-start">
       <img

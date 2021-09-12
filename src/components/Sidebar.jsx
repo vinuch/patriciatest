@@ -8,7 +8,7 @@ import WalletIcon from './SVGs/WalletIcon';
 
 export default function Sidebar() {
   return (
-    <div className="pt-10 md:fixed w-2/12 border-gray1 border-r h-screen hidden md:block z-10">
+    <div className="pt-10 lg:fixed w-2/12 border-gray1 border-r h-screen hidden lg:block z-10">
       <img
         src={logo}
         alt="Patricia Logo"

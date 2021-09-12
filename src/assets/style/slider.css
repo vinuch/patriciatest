@@ -65,7 +65,7 @@
   background: #1D1E2C;
 }
 
-@media (min-width:320px)  {
+@media (min-width:600px)  {
 .carousel__item[data-pos="1"] {
   width: 50%;
 }

@@ -2,7 +2,7 @@ import CardSlider from './CardSlider';
 
 export default function MainArea() {
   return (
-    <div className="h-100 px-4 py-12 w-full border-t border-gray1 md:px-8 md:w-8/12">
+    <div className="h-100 px-4 py-12 w-full border-t border-gray1 lg:px-8 lg:w-8/12">
       <div className="flex flex-wrap items-center justify-between">
         <div className="flex items-center">
           <svg

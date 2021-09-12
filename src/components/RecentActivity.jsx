@@ -6,7 +6,7 @@ import NikeLogo from './SVGs/NikeLogo';
 
 export default function RecentActivity() {
   return (
-    <div className="md:w-28p right-0 right-0 p-4 pb-24 w-full h-full bg-gray4 md:fixed md:p-6">
+    <div className="lg:w-28p right-0 right-0 p-4 pb-24 w-full h-full bg-gray4 lg:fixed md:p-6">
       <div className="p-4 w-full h-full bg-white rounded-lg">
         <div className="flex justify-between">
           <h4 className="text-gray5 text-lg font-medium">Recent Activity</h4>
