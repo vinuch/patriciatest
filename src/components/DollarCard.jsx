@@ -1,8 +1,10 @@
 // import '../assets/style/card.css'
+import { useState } from 'react';
 import logo from '../assets/img/logo-white.svg';
 import mastercard from '../assets/img/mastercard.png';
 
 export default function DollarCard() {
+  const [hidden, setHidden] = useState(false)
   return (
     <div className={`card relative w-full h-full px-6 py-6 bg-black text-white`}>
       <svg className={`absolute -top-4 right-0 fill-current text-light`} width="177" height="169" viewBox="0 0 177 169" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,39 +34,62 @@ export default function DollarCard() {
           className="w-24"
 
         />
-        <button className="cursor-pointer z-20">
-          <svg className="w-6 fill-current" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.03205 4.41963C7.36785 4.41963 6.82733 4.96015 6.82733 5.62435C6.82733 6.28856 7.36785 6.82908 8.03205 6.82908C8.69625 6.82908 9.23677 6.28856 9.23677 5.62435C9.23677 4.96015 8.69625 4.41963 8.03205 4.41963ZM8.03205 8.43538C6.48197 8.43538 5.22103 7.17443 5.22103 5.62435C5.22103 4.07428 6.48197 2.81333 8.03205 2.81333C9.58213 2.81333 10.8431 4.07428 10.8431 5.62435C10.8431 7.17443 9.58213 8.43538 8.03205 8.43538ZM15.957 5.22336C15.4438 4.33026 12.6143 -0.146497 7.81384 0.00369219C3.37483 0.116936 0.791905 4.02828 0.106016 5.22336C-0.0353386 5.47154 -0.0353386 5.77513 0.106016 6.0233C0.612 6.90435 3.34271 11.2454 8.05157 11.2454C8.11663 11.2454 8.18249 11.2446 8.24915 11.243C12.6882 11.1297 15.2711 7.21839 15.957 6.0233C16.0983 5.77513 16.0983 5.47154 15.957 5.22336Z"/>
-          </svg>
+        <button className="cursor-pointer z-20" onClick={() => setHidden(!hidden)}>
+          {
+            !hidden ? (
+              <svg className="w-6 fill-current" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.03205 4.41963C7.36785 4.41963 6.82733 4.96015 6.82733 5.62435C6.82733 6.28856 7.36785 6.82908 8.03205 6.82908C8.69625 6.82908 9.23677 6.28856 9.23677 5.62435C9.23677 4.96015 8.69625 4.41963 8.03205 4.41963ZM8.03205 8.43538C6.48197 8.43538 5.22103 7.17443 5.22103 5.62435C5.22103 4.07428 6.48197 2.81333 8.03205 2.81333C9.58213 2.81333 10.8431 4.07428 10.8431 5.62435C10.8431 7.17443 9.58213 8.43538 8.03205 8.43538ZM15.957 5.22336C15.4438 4.33026 12.6143 -0.146497 7.81384 0.00369219C3.37483 0.116936 0.791905 4.02828 0.106016 5.22336C-0.0353386 5.47154 -0.0353386 5.77513 0.106016 6.0233C0.612 6.90435 3.34271 11.2454 8.05157 11.2454C8.11663 11.2454 8.18249 11.2446 8.24915 11.243C12.6882 11.1297 15.2711 7.21839 15.957 6.0233C16.0983 5.77513 16.0983 5.47154 15.957 5.22336Z"/>
+            </svg>
+            ): (
+              <svg className="w-6 fill-current" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.953 1.25784C13.1599 1.05085 13.1599 0.715255 12.953 0.508268C12.746 0.30128 12.4104 0.30128 12.2034 0.508268L0.896203 11.8155C0.689215 12.0224 0.689215 12.358 0.896203 12.565C1.10319 12.772 1.43878 12.772 1.64577 12.565L3.79061 10.4202C4.72192 10.8498 5.7881 11.1302 6.92458 11.1302C8.77456 11.1302 10.4383 10.3872 11.6371 9.46708C12.2373 9.00643 12.7298 8.49482 13.0753 7.99691C13.4143 7.50849 13.6382 6.99492 13.6382 6.53665C13.6382 6.07838 13.4143 5.5648 13.0753 5.07638C12.7298 4.57847 12.2373 4.06686 11.6371 3.60622C11.4459 3.45945 11.2428 3.31718 11.0291 3.18172L12.953 1.25784ZM9.13563 5.07516L8.35969 5.8511C8.45903 6.05868 8.51465 6.29117 8.51465 6.53665C8.51465 7.41482 7.80275 8.12672 6.92458 8.12672C6.6791 8.12672 6.44661 8.07109 6.23904 7.97176L5.4631 8.7477C5.88205 9.02518 6.38444 9.18677 6.92458 9.18677C8.3882 9.18677 9.5747 8.00027 9.5747 6.53665C9.5747 5.99651 9.41311 5.49411 9.13563 5.07516Z"/>
+              <path d="M7.35799 3.92179C7.442 3.93561 7.52856 3.91104 7.58876 3.85084L8.85311 2.58649C8.98547 2.45414 8.93043 2.22946 8.74937 2.18202C8.17044 2.03033 7.55844 1.9431 6.92458 1.9431C5.0746 1.9431 3.41088 2.68611 2.21204 3.60622C1.61184 4.06686 1.11935 4.57847 0.773817 5.07638C0.434863 5.5648 0.210938 6.07838 0.210938 6.53665C0.210938 6.99492 0.434863 7.50849 0.773817 7.99691C1.05847 8.40709 1.44285 8.82657 1.90503 9.21919C2.00219 9.30173 2.14606 9.29354 2.23621 9.20339L4.23878 7.20083C4.29898 7.14063 4.32354 7.05407 4.30973 6.97006C4.28652 6.82903 4.27446 6.68425 4.27446 6.53665C4.27446 5.07302 5.46096 3.88652 6.92458 3.88652C7.07218 3.88652 7.21696 3.89859 7.35799 3.92179Z"/>
+              </svg>
+
+            )
+          }
+
+
         </button>
       </div>
 
-      <p className="flex justify-between text-2xl font-light mt-16 tracking-widest">
-        <span className="">7545</span>
-        <span>7545</span>
-        <span>7545</span>
-        <span>7545</span>
-      </p>
+      {
+          hidden ? (
+            <p className="flex justify-between text-2xl font-light mt-16 tracking-widest">
+              <span>••••</span>
+              <span>••••</span>
+              <span>••••</span>
+              <span>••••</span>
+            </p>
+          ): (
+            <p className="flex justify-between text-2xl font-light mt-16 tracking-widest">
+              <span>7545</span>
+              <span>7545</span>
+              <span>7545</span>
+              <span>7545</span>
+            </p>
+          )
+        }
 
       <p className="flex text-base items-center my-4">
         <span className="font-light text-xs">BALANCE</span>
-        <span className="ml-2 font-medium text-xl">$200,000</span>
+        <span className="ml-2 font-medium text-xl">{ hidden ? '••••' : '$200,000' }</span>
       </p>
 
       <div className="flex justify-between text-xs items-center">
         <p>Card Holder Name</p>
 
-        <div className="flex items-center">
-          <span>VALID <br /> THRU</span>
+        <div className="flex items-center mx-2">
+          <span style={{fontSize: '9px', lineHeight: '10px'}}>VALID <br /> THRU</span>
           <span className="ml-2">10/12</span>
         </div>
 
-        <div className="flex">
-          <span>CVV</span>
-          <div>...</div>
+        <div className="flex items-center mx-2 ">
+          <span style={{fontSize: '9px', lineHeight: '10px'}}>CVV</span>
+          <div className="text-lg ml-2">••••</div>
         </div>
 
-        <img src={mastercard} alt="" className="w-16 h-10" />
+        <img src={mastercard} alt="" className="w-12 h-8 md:w-16 md:h-10" />
       </div>
     </div>
   )
