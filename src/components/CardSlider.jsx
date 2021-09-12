@@ -42,6 +42,7 @@ export default function CardSlider() {
       <ul className="carousel__list">
         {cards.map((item, idx) => (
           <li
+            key={idx}
             className={`carousel__item dollar_card overflow-hidden`}
             data-pos={idx + 1}
             onClick={handleClick}

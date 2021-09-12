@@ -5,9 +5,9 @@ import logo from '../assets/img/Logo.svg';
 import avatar from '../assets/img/avatar.png'
 export default function Header() {
   return (
-    <div className=" flex justify-between items-start py-6 fixed w-full md:w-10/12 z-20 bg-white">
+    <div className=" flex justify-between items-start fixed w-full md:w-10/12 z-20 bg-white">
             
-      <div className="bg-white md:w-8/12 px-6  flex flex-wrap items-start">
+      <div className="bg-white md:w-8/12 px-6 py-6 flex flex-wrap items-start">
       <img
         src={logo}
         alt="Patricia Logo"
@@ -20,7 +20,7 @@ export default function Header() {
       </div>
 
       </div>
-      <div className="md:bg-gray4 md:w-4/12 flex items-center justify-end md:px-6">
+      <div className="md:bg-gray4 md:w-4/12 flex items-center py-6 justify-end md:px-6">
         <button className="bg-white p-2 mx-2 rounded-md">
           <NotificationIcon showBadge/>
         </button>
